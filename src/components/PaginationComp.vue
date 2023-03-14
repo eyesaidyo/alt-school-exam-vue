@@ -6,10 +6,15 @@ const store = useRepoStore();
 // }
 </script>
 <template>
-  <span>{{ store.page }}</span>
-  <button v-for="num in buttonArray" :key="num" @click="store.changePage(num)">
-    {{ num }}
-  </button>
+  <div class="pagination">
+    <button
+      v-for="num in buttonArray"
+      :key="num"
+      @click="store.changePage(num)"
+    >
+      {{ num }}
+    </button>
+  </div>
 </template>
 <script>
 export default {
@@ -20,3 +25,14 @@ export default {
   },
 };
 </script>
+<style scoped>
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  margin: 50px 35%;
+}
+button {
+  padding: 6px 8px;
+}
+</style>
