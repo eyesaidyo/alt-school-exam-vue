@@ -1,5 +1,5 @@
 # alt-school-exam-vue
-# link to the live project: rasine-vue.netlify.app
+# link to the live project [HERE](https:rasine-vue.netlify.app)
 ## Project setup
 ```
 npm install
