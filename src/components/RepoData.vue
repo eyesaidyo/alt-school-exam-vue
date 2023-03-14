@@ -1,14 +1,17 @@
 <template>
   <h1>repo details</h1>
-  <div class="card">
-    <p>id: {{ store.currentRepo.id }}</p>
-    <p>name: {{ store.currentRepo.name }}</p>
-    <p>
-      url: <a>{{ store.currentRepo.html_url }}</a>
-    </p>
-    <p>date created: {{ store.currentRepo.created_at }}</p>
-    <p>forks: {{ store.currentRepo.forks }}</p>
-    <p>visibility: {{ store.currentRepo.visibility }}</p>
+  <div class="back">
+    <router-link to="/"><span class="back-txt">go back</span></router-link>
+    <div class="card">
+      <p>id: {{ store.currentRepo.id }}</p>
+      <p>name: {{ store.currentRepo.name }}</p>
+      <p>
+        url: <a>{{ store.currentRepo.html_url }}</a>
+      </p>
+      <p>date created: {{ store.currentRepo.created_at }}</p>
+      <p>forks: {{ store.currentRepo.forks }}</p>
+      <p>visibility: {{ store.currentRepo.visibility }}</p>
+    </div>
   </div>
 </template>
 <script>
@@ -54,16 +57,25 @@ h1 {
   text-decoration: underline;
   margin-bottom: 30px;
 }
-.card {
-  display: flex;
-  flex-direction: column;
+.back {
+  text-align: left;
   width: 65%;
-  padding: 20px;
   margin: 10px auto;
-  align-items: center;
   background-color: #333333;
   box-shadow: 2px 2px 4px #66666600;
   border-radius: 2px;
+}
+.back-txt {
+  color: yellow;
+  background-color: #333333;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #333333;
+  padding: 20px;
+
+  align-items: center;
 }
 p {
   background-color: #333333;
