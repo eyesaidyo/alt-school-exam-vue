@@ -4,6 +4,7 @@
     <img
       class="profile-pic"
       src="https://avatars.githubusercontent.com/u/96142543?v=4"
+      alt="avatar"
     />
     <div class="profile-details">
       <p>Name: {{ store.myProfile.name }}</p>

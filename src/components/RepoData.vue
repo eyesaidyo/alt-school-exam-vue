@@ -74,7 +74,7 @@ h1 {
   flex-direction: column;
   background-color: #333333;
   padding: 20px;
-
+  text-align: center;
   align-items: center;
 }
 p {
