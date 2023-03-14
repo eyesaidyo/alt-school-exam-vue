@@ -14,16 +14,19 @@ export const router = createRouter({
   routes: [
     {
       name: 'home',
-      path: '/',
+      path: '',
       component: MyReposVue,
+      children: [
+        {
+          name: 'repoDetails',
+          path: 'repos/:id',
+          component: RepoDataVue,
+          props: true
+        },
+      ]
     },
 
-    {
-      name: 'repoDetails',
-      path: '/repos/:id',
-      component: RepoDataVue,
-      props: true
-    },
+
     {
       name: 'NotFound',
       path: '/:catchAll(.*)',

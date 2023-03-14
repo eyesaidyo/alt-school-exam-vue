@@ -12,6 +12,7 @@
       <p>Public Repositories: {{ store.myProfile.public_repos }}</p>
     </div>
   </div>
+  <router-view></router-view>
   <div class="repos-wrap">
     <h5>Repositories:</h5>
     <span>Page {{ store.page }} of {{ store.totalPages }}</span>
@@ -26,6 +27,7 @@
         <div class="repo-card">{{ repo.name }}</div>
       </router-link>
     </div>
+
     <!-- <router-link to="abc">error 404</router-link> -->
   </div>
   <div class="pagination">
@@ -99,6 +101,7 @@ export default {
 <style scoped>
 h2 {
   text-align: center;
+  text-decoration: underline;
 }
 .links {
   text-decoration: none;

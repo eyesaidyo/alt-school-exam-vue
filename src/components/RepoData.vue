@@ -1,8 +1,15 @@
 <template>
-  <h1>data</h1>
-  <p>id: {{ store.currentRepo.id }}</p>
-  <p>name: {{ store.currentRepo.name }}</p>
-  <p>forks: {{ store.currentRepo.forks }}</p>
+  <h1>repo details</h1>
+  <div class="card">
+    <p>id: {{ store.currentRepo.id }}</p>
+    <p>name: {{ store.currentRepo.name }}</p>
+    <p>
+      url: <a>{{ store.currentRepo.html_url }}</a>
+    </p>
+    <p>date created: {{ store.currentRepo.created_at }}</p>
+    <p>forks: {{ store.currentRepo.forks }}</p>
+    <p>visibility: {{ store.currentRepo.visibility }}</p>
+  </div>
 </template>
 <script>
 import { useRepoStore } from "./MyRepos.vue";
@@ -41,3 +48,24 @@ export default {
   },
 };
 </script>
+<style scoped>
+h1 {
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 30px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  padding: 20px;
+  margin: 10px auto;
+  align-items: center;
+  background-color: #333333;
+  box-shadow: 2px 2px 4px #66666600;
+  border-radius: 2px;
+}
+p {
+  background-color: #333333;
+}
+</style>
